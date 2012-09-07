@@ -37,7 +37,7 @@ function PicsCtrl($scope, $http) {
 
 	$scope.loadContent = function(url) {
 		$http.jsonp(url).success(function(data){
-			$scope.pics = data.data.children;
+			$scope.$root.pics = data.data.children;
 			$scope.after = data.after;
 		});	
 	};		
