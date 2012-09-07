@@ -26,7 +26,6 @@ function PicsCtrl($scope, $http) {
 	$scope.reload = function() {
 		var subreddit = $('#subreddit').val().length > 0 ? $('#subreddit').val() : 'pics';
 		var url = 'http://api.reddit.com/r/' + subreddit + '.json?jsonp=JSON_CALLBACK';
-		alert(url);
 		$scope.loadContent(url);
 	};
 
